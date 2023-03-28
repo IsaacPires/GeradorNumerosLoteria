@@ -20,8 +20,7 @@ class GeradorDeNumeros extends Controller
             for ($i = 0; $i < $number; $i++) {
                 $finalNumber[] = array_pop($randnumber);
             }
- 
-            return json_encode($finalNumber);
+            return view('gerador', compact('finalNumber'));
             
         } catch (\Exception $e) {
             echo 'Exceção capturada: ',  $e->getMessage(), "\n";
